@@ -4,7 +4,9 @@ class Admin::PreferencesController < ApplicationController
   end
 
   def update
-    binding.pry
+    @preferences = Preference.find_or_create_by(id: 1)
+    @preferences.update(preference_params)
+    redirect_to preference_path(@preferences)
   end
 
   private
