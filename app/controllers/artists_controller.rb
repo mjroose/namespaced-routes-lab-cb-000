@@ -3,7 +3,7 @@ class ArtistsController < ApplicationController
     if Preference.first.artist_sort_order == 'DESC'
       @artists = Artist.all.sort { |a, b| b <=> a }
     else
-      @artists = Artist.all
+      @artists = Artist.all.sort { |a, b| a <=> b }
     end
   end
 
