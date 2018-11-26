@@ -36,6 +36,8 @@ class SongsController < ApplicationController
 
   def new
     allow_create_songs = Preference.first.nil? ? true : Preference.first.allow_create_songs
+    binding.pry
+        
     if !allow_create_songs
       redirect_to songs_path
     end
