@@ -6,9 +6,9 @@
   <%= f.label :song_sort_order %>
   <%= f.collection_radio_buttons :song_sort_order, @preferences.asc_desc, :first, :last %><br>
   <%= f.label :allow_create_artists %>
-  <%= f.collection_radio_buttons :allow_create_artists, @preferences.asc_desc, :first, :last %><br>
+  <%= f.collection_radio_buttons :allow_create_artists, @preferences.yes_no, :first, :last %><br>
   <%= f.label :allow_create_songs %>
-  <%= f.collection_radio_buttons :allow_create_songs, @preferences.asc_desc, :first, :last %><br>
+  <%= f.collection_radio_buttons :allow_create_songs, @preferences.yes_no, :first, :last %><br>
 
   <%= f.submit %>
 <% end %>
