@@ -9,4 +9,15 @@ class Preference < ActiveRecord::Base
       value: 'A-Z'
     }]
   end
+
+  def yes_no
+    [{
+      text: 'Yes',
+      value: true
+    },
+    {
+      text: 'No',
+      value: false
+    }]
+  end
 end
