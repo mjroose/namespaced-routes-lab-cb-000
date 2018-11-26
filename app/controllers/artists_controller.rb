@@ -15,7 +15,7 @@ class ArtistsController < ApplicationController
 
   def new
     allow_create_artists = Preference.first.nil? ? true : Preference.first.allow_create_artists
-
+    binding.pry
     if !allow_create_artists
       redirect_to artists_path
     end
