@@ -2,7 +2,7 @@
 
 <%= form_for [:admin, @preferences] do |f| %>
   <%= f.label :artist_sort_order %>
-  <%= f.collection_radio_buttons :artist_sort_order, @preferences.asc_desc, :values.first, :keys.first %>
+  <%= f.collection_radio_buttons :artist_sort_order, @preferences.asc_desc, :first, :last %>
 
   <%= f.submit %>
 <% end %>
