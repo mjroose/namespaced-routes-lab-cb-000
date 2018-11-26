@@ -9,6 +9,7 @@ class SongsController < ApplicationController
           @songs = @artist.songs.sort { |a, b| b.title <=> a.title }
         else
           @songs = @artist.songs.sort { |a, b| a.title <=> b.title }
+        end
       end
     else
       if Preference.first.song_sort_order == 'DESC'
