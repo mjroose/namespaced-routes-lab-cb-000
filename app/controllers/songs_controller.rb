@@ -36,7 +36,7 @@ class SongsController < ApplicationController
     if !Preference.first.allow_create_songs
       redirect_to songs_path
     end
-    
+
     @song = Song.new
   end
 
