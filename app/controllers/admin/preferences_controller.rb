@@ -1,5 +1,5 @@
 class Admin::PreferencesController < ApplicationController
-  def index
+  def show
     @preferences = Preference.find_or_create_by(id: 1)
   end
 end
