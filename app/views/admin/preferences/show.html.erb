@@ -2,8 +2,14 @@
 
 <%= form_for [:admin, @preferences] do |f| %>
   <%= f.label :artist_sort_order %>
-  <%= f.collection_radio_buttons :artist_sort_order, @preferences.asc_desc, :first, :last %>
-
+  <%= f.collection_radio_buttons :artist_sort_order, @preferences.asc_desc, :first, :last %><br>
+  <%= f.label :artist_sort_order %>
+  <%= f.collection_radio_buttons :artist_sort_order, @preferences.asc_desc, :first, :last %><br>
+  <%= f.label :artist_sort_order %>
+  <%= f.collection_radio_buttons :artist_sort_order, @preferences.asc_desc, :first, :last %><br>
+  <%= f.label :artist_sort_order %>
+  <%= f.collection_radio_buttons :artist_sort_order, @preferences.asc_desc, :first, :last %><br>
+  
   <%= f.submit %>
 <% end %>
 <!-- p = Preference.new(artist_sort_order: "DESC", song_sort_order: "ASC", allow_create_artists: false, allow_create_songs: true) -->
