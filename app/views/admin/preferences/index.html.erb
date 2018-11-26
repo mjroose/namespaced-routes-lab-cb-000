@@ -1,1 +1,19 @@
 <h2>Preferences</h2>
+
+<%= form_for @preference do |f| %>
+  <%= f.label :artist_sort_order %>
+  <%= f.collection_radio_buttons :artist_sort_order,
+    [{
+      text: 'A-Z'
+      value: 'ASC'
+    }, 
+    {
+      text: 'Z-A',
+      value: 'A-Z'
+    }], :id , :name %></br>
+
+  # t.string :artist_sort_order
+  # t.string :song_sort_order
+  # t.boolean :allow_create_artists
+  # t.boolean :allow_create_songs
+<% end %>
