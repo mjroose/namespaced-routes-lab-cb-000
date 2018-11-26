@@ -14,7 +14,7 @@ class SongsController < ApplicationController
         end
       end
     else
-      if Preference.first.song_sort_order == 'DESC'
+      if song_sort_order == 'DESC'
         @songs = Song.all.sort { |a, b| b.title <=> a.title }
       else
         @songs = Song.all.sort { |a, b| a.title <=> b.title }
