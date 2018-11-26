@@ -1,7 +1,7 @@
 class ArtistsController < ApplicationController
   def index
     if Preference.first.artist_sort_order == 'DESC'
-      @artists = Artist.all.reverse
+      @artists = Artist.all.sort { |a, b| b <=> a }
     else
       @artists = Artist.all
     end
