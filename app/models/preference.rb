@@ -1,13 +1,6 @@
 class Preference < ActiveRecord::Base
   def asc_desc
-    [{
-      text: 'A-Z',
-      value: 'ASC'
-    },
-    {
-      text: 'Z-A',
-      value: 'A-Z'
-    }]
+    [ { 'A-Z' => 'ASC' }, { 'Z-A' => 'DESC' } ]
   end
 
   def yes_no
