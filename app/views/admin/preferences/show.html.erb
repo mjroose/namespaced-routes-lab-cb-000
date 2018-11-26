@@ -2,15 +2,7 @@
 
 <%= form_for @preferences do |f| %>
   <%= f.label :artist_sort_order %>
-  <%= f.collection_radio_buttons :artist_sort_order,
-    [{
-      text: 'A-Z',
-      value: 'ASC'
-    },
-    {
-      text: 'Z-A',
-      value: 'A-Z'
-    }], :id , :name %></br>
+  <%= f.collection_radio_buttons :artist_sort_order, @preferences.asc_desc, :value , :text %></br>
 
   # t.string :artist_sort_order
   # t.string :song_sort_order
