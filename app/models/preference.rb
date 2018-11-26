@@ -4,13 +4,6 @@ class Preference < ActiveRecord::Base
   end
 
   def yes_no
-    [{
-      text: 'Yes',
-      value: true
-    },
-    {
-      text: 'No',
-      value: false
-    }]
+    [ [true, 'Yes'], [false, 'No'] ]
   end
 end
