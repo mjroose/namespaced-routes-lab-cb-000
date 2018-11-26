@@ -11,7 +11,11 @@ class SongsController < ApplicationController
           @songs = @artist.songs.sort { |a, b| a.title <=> b.title }
       end
     else
-      @songs = Song.all
+      if Preference.first.song_sort_order == 'DESC'
+        @songs = Song.all.sort { |a, b| b.title <=> a.title }
+      else
+        @songs = Song.all.sort { |a, b| a.title <=> b.title }
+      end
     end
   end
 
@@ -70,4 +74,3 @@ class SongsController < ApplicationController
     params.require(:song).permit(:title, :artist_name)
   end
 end
-
