@@ -6,7 +6,7 @@ class Admin::PreferencesController < ApplicationController
   def update
     @preferences = Preference.find_or_create_by(id: 1)
     @preferences.update(preference_params)
-    redirect_to preference_path(@preferences)
+    redirect_to admin_preference_path(@preferences)
   end
 
   private
